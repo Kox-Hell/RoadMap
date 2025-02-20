@@ -1,0 +1,124 @@
+* {
+    font-family: 'Signika';
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-container {
+    position: relative;
+    width: 300px;
+}
+
+.button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Animación suave */
+    transform: translateY(-50%);
+    transform-origin: center; /* Establece el punto de giro en el centro del icono */
+}
+
+.icon.active {
+    transform: translateY(-50%) rotate(180deg); /* Gira sin moverse */
+}
+
+.list-container {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 70px;
+    transition: 0.3s; /* Transición suave */
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 25px;
+}
+
+li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s; /* Transición suave */
+}
+
+.checkbox {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 5%;
+  }
+  
+  .checkbox::after {
+    content: "✓"; /* Símbolo de "checked" */
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    left: 6px;
+  }
+  
+
+li:hover {
+    background-color: lightgray;
+    text-shadow: 0 0 10px green; /* Brillo blanco */
+
+}
+
+ul :nth-child(1):not(.checkbox) {
+    border-radius: 25px 25px 0 0;
+}
+
+ul :nth-child(5) {
+    border-radius: 0 0 25px 25px;
+}
