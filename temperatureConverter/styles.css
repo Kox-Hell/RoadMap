@@ -1,0 +1,224 @@
+* {
+    font-family: 'Signika';
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-container {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: auto;
+    border: 0.125rem solid black;
+    border-radius: 1.5625rem;
+    padding: 2rem 2rem 3rem 2rem;
+}
+
+.text-container {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.sm-text {
+    font-size: 1.25rem;
+}
+
+.inputs-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.from-container, .to-container {
+    position: relative;
+}
+
+.inputs-container {
+    position: relative;
+}
+
+.list-container {
+    display: none;
+}
+
+.list-container.to {
+    z-index: 2;
+    top: 114%;
+    right: 34%;
+    display: block;
+    position: absolute;
+    width: 10.9375rem;
+    height: auto;
+    border-radius: 0.625rem;
+    border: 0.125rem solid black;
+    background-color: white;
+    padding: 0.625rem;
+}
+
+.list-container.from {
+    z-index: 2;
+    top: 114%;
+    right: 60%;
+    display: block;
+    position: absolute;
+    width: 10.9375rem;
+    height: auto;
+    border-radius: 0.625rem;
+    border: 0.125rem solid black;
+    background-color: white;
+    padding: 0.625rem;
+}
+
+li {
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+}
+
+li:hover {
+    background-color: grey;
+    cursor: pointer;
+    border-radius: 0.625rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 0.625rem;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7%;
+    transition: 0.3s ease-in-out;
+    transform-origin: center;
+    user-select: none;
+}
+
+.icon.rotate {
+    transform: translateY(-50%) rotate(180deg); /* Gira sin moverse */
+}
+
+.temp-input, .from-button, .to-button {
+    border-radius: 0.625rem;
+    border: 0.125rem solid black;
+    width: 10.9375rem;
+    height: 2.5rem;
+    padding: 0.625rem;
+}
+
+.from-button, .to-button  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.from-button:hover, .to-button:hover {
+    background-color: grey;
+} 
+
+button:disabled {
+    border: 0.125rem solid grey;
+}
+
+button::placeholder {
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+
+input:disabled {
+    border: 0.125rem solid grey;
+    pointer-events: none;
+}
+
+input::placeholder {
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+.temp-input {
+    width: 6.25rem;
+}
+
+/* Definir la animación de brillo */
+@keyframes glowEffect {
+    0% { box-shadow: 0 0 0.3125rem #00ff37; border: 0.125rem solid #00ff37; }
+    50% { box-shadow: 0 0 0.9375rem #00ff37; border: 0.125rem solid #00ff37; }
+    100% { box-shadow: 0 0 0.3125rem #00ff37; border: 0.125rem solid #00ff37; }
+}
+
+/* Aplica la animación cuando el input NO esté deshabilitado */
+.temp-input:not(:disabled) {
+    animation: glowEffect 0.3s ease-in-out;
+}
+.to-button:not(:disabled) {
+    animation: glowEffect 0.3s ease-in-out;
+}
+.convert-button:not(:disabled) {
+    animation: glowEffect 0.3s ease-in-out;
+}
+.result-container.active:not(:disabled) {
+    animation: glowEffect 0.5s ease-in-out;
+}
+
+
+.convert-button {
+    width: 7.5rem;
+    font-size: 1.25rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.625rem;
+    border: 0.125rem solid grey;
+    cursor: pointer;
+}
+
+.convert-button:disabled {
+    background-color: grey;
+    pointer-events: none;
+    user-select: none;
+}
+
+.convert-button:hover {
+    background-color: grey;
+    color: black;
+    border: 0.125rem solid black;
+}
+
+.result-container.active {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 130%;
+    left: 1%;
+    color: green;
+}
+
+.result-container {
+    display: none;
+}

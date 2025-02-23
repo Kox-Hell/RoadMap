@@ -10,7 +10,24 @@ tabs.forEach(function(tab) {
             t.classList.remove('active');
         });
         content.forEach(function(c) {
-            c.classList.remove('active');
+            c.classList.remove('active');document.addEventListener('DOMContentLoaded', function () {
+
+                //Variables Globales
+                let tempInput = document.querySelector('.temp-input');
+                let fromButton = document.querySelector('.from-input');
+                let toButton = document.querySelector('.to-input');
+                let convertButton = document.querySelector('.convert-button');
+            
+                tempInput.addEventListener('input', function() {
+                    if (tempInput.value.trim() === '') {
+                        fromButton.disabled = true;
+                        console.log('Contenido en Input');
+                    }else {
+                        console.log('Error en input');
+                    }
+                })
+            
+            })
         });
         tab.classList.add('active');
         let contentId = tab.id.replace('tab', 'content');

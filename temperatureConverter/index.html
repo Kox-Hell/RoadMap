@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="general-container">
+            <div class="text-container">
+                <h1 class="lg-text">
+                    Temperature Converter
+                </h1>
+                <p class="sm-text">
+                    Enter the temperature, select units and submit
+                </p>
+            </div>
+            <div class="inputs-container">
+                <div class="temp-container">
+                    <input disabled type="number" id="temp-input" class="temp-input" placeholder="0" step="0.01" min="-273.15">
+                </div>
+                <div class="from-container">
+                    <button id="from" class="from-button">From Unit</button>
+                    <div id="iconFrom" class="icon">
+                        V
+                    </div>
+                </div>
+                <div class="to-container">
+                    <button disabled id="to"  class="to-button">To Unit</button>
+                    <div id="iconTo" class="icon">
+                        V
+                    </div>
+                </div>
+                <button id="convert-button" disabled type="submit" class="convert-button">
+                    Convert
+                </button>
+                <div id="list-container" class="list-container">
+                    <ul>
+                        <li id="fahrenheit">Fahrenheit</li>
+                        <li id="celsius">Celsius</li>
+                        <li id="kelvin">Kelvin</li>
+                    </ul>
+                </div>
+                <div class="result-container">
+                    34 Celsius is 93.2 Fahrenheit
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="styles.js"></script>
+</body>
+</html>
